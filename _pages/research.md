@@ -64,10 +64,11 @@ nav_order: 2
 
   <div class="col mb-4">
     <div class="proj-box">
-      <h3>Evaluating ML-KEM at (much) higher security levels</h3>
+      <h3>Kaiburr: ML-KEM at (much) higher security</h3>
       <div class="proj-meta">MPI-SP · with <a href="https://cryptojedi.org/peter/index.shtml">Peter Schwabe</a> &amp; <a href="https://vadimlyubash.github.io/">Vadim Lyubashevsky</a> · cryptographic engineering</div>
-      <p>Designing and analyzing a novel noise distribution for ML-KEM at elevated security levels. Currently implementing formally-verifiable, constant-time AVX2 assembly in Jasmin and benchmarking on multiple x86-64 hardware.</p>
+      <p>Generalized ML-KEM's noise distribution to scale module rank past the decryption-failure limit, keeping its ring arithmetic and simple, constant-time sampling. Defined three parameter sets reaching up to 1717 bits of classical Core-SVP security within FrodoKEM-640's communication budget, with decryption-failure bounds formally verified in EasyCrypt. Implemented in C, in Jasmin with machine-checked constant-time verification, and for Pavona's ACC, and benchmarked on three Intel microarchitectures.</p>
       <div class="proj-links">
+        <a href="https://eprint.iacr.org/2026/2730">ePrint</a>
         <a href="https://github.com/cryptojedi/kaiburr">Code</a>
       </div>
     </div>
@@ -77,9 +78,9 @@ nav_order: 2
     <div class="proj-box">
       <h3>Monogenic Fields of Cryptographic Size</h3>
       <div class="proj-meta">BYU · supervised by <a href="https://mathdept.byu.edu/~kpratt/">Kyle Pratt</a> &amp; <a href="https://mathdept.byu.edu/~nick/">Nick Andersen</a> · Ring-LWE / lattice-based cryptography</div>
-      <p>Explicit number-field constructions via polynomial transformations for Ring-LWE schemes. Designed and analyzed algebraic number fields in SageMath, computing discriminants, Galois groups, and ramification, to identify cryptographically secure parameters, with proofs of irreducibility and monogenicity. Paper currently in final stages of preparation. </p>
+      <p>Explicit number-field constructions via polynomial transformations for Ring-LWE schemes. Designed and analyzed algebraic number fields in SageMath, computing discriminants, Galois groups, and ramification, to identify cryptographically secure parameters, with proofs of irreducibility and monogenicity.</p>
       <div class="proj-links">
-        <!-- TODO: add paper link when available -->
+        <a href="https://arxiv.org/abs/2609.22374">arXiv</a>
       </div>
     </div>
   </div>

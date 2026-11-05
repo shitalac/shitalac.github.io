@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post{% if page.profile.align == 'center' %} home-narrow{% endif %}">
   <header class="post-header">
     <h1 class="post-title home-title">
       {% if site.title == 'blank' %}
