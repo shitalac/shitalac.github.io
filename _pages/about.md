@@ -11,7 +11,7 @@ profile:
 social: false
 ---
 
-I am a sophomore at BYU studying Mathematics and Computer Science.
+I am a sophomore at BYU majoring in Mathematics with minors in Computer Science and Cybersecurity.
 
 I’m interested in security and privacy. Currently I am formalizing and evaluating cryptographic protocols for Utah's new State-Endorsed Digital Identity [(SEDI)](https://sedi.utah.gov/) framework, under the supervision of [Kent Seamons](https://cs.byu.edu/department/directories/faculty-directory/kent-seamons/).
 
