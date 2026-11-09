@@ -1,5 +1,5 @@
 // Bright purple accents for the light theme.
-$site-accent: #8a2be2;
+$site-accent: #a855f7;
 
 :root,
 html[data-theme="light"] {
@@ -14,7 +14,7 @@ html[data-theme="light"] {
   font-weight: 700;
 }
 
-// Homepage: align the portrait with the heading beside the bio.
+// Homepage: keep the heading above the bio and center the portrait beside it.
 .about-page {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -70,8 +70,12 @@ html[data-theme="light"] {
   .about-page {
     grid-template-columns: 220px minmax(0, 1fr);
     grid-template-rows: auto 1fr;
-    grid-template-areas: "photo header" "photo body";
+    grid-template-areas: ". header" "photo body";
     column-gap: 2.5rem;
+
+    > .profile {
+      align-self: center;
+    }
   }
 }
 
