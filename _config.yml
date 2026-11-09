@@ -2,22 +2,22 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Swechchha Adhikari # the web title (if blank, full name will be used instead)
-first_name: Swechchha
-last_name: Adhikari
+title: Shital Acharya # the web title (if blank, full name will be used instead)
+first_name: Shital
+last_name: Acharya
 
 contact_note: >
-  Contact: adhikar6@byu.edu<br>
-  <a href="https://www.linkedin.com/in/swechchhaa/" target="_blank">LinkedIn</a>
+  Contact: shitalac@byu.edu<br>
+  <a href="https://www.linkedin.com/in/shitalacharya/" target="_blank">LinkedIn</a>
 
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Swechchha (Sia) Adhikari — mathematics and cryptography researcher at BYU and the Max Planck Institute for Security and Privacy (MPI-SP), focused on post-quantum and lattice-based cryptography.
+  Shital Acharya — mathematics and computer science student at BYU, researching security, privacy, and cryptographic protocols.
 footer_text:
-keywords: Swechchha Adhikari, Sia Adhikari, Swechchha Adhikari BYU, Sia Adhikari BYU, post-quantum cryptography, lattice-based cryptography, cryptography, mathematics, MPI-SP, BYU
+keywords: Shital Acharya, BYU, mathematics, computer science, security, privacy, cryptography, digital identity, IDeA Labs, BeeYU
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://swechchhaa.com # the base hostname & protocol for your site
+url: https://shitalac.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -64,7 +64,7 @@ max_width: 930px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: https://swechchhaa.com/assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
+og_image: https://shitalac.github.io/assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
