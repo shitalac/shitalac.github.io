@@ -4,7 +4,7 @@ title: about
 permalink: /
 
 profile:
-  align: center
+  align: left
   image: prof_pic.jpg
   image_circular: false
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post{% if page.profile.align == 'center' %} home-narrow{% endif %}">
+<div class="post about-page{% unless page.profile %} about-page-no-profile{% endunless %}">
   <header class="post-header">
     <h1 class="post-title home-title">
       {% if site.title == 'blank' %}
@@ -11,33 +11,32 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    {% if page.subtitle %}
+      <p class="desc">{{ page.subtitle }}</p>
+    {% endif %}
   </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile {% if page.profile.align == 'center' %}profile-center{% elsif page.profile.align == 'left' %}float-left{% else %}float-right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+  {% if page.profile %}
+    <div class="profile">
+      {% if page.profile.image %}
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% if page.profile.image_circular %}
+          {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+        {% else %}
+          {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes="220px" alt=site.title
+          cache_bust=true
+        %}
+      {% endif %}
+      {% if page.profile.more_info %}
+        <div class="more-info">{{ page.profile.more_info }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
 
+  <article>
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->

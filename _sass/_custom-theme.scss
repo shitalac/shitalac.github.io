@@ -1,5 +1,5 @@
-// Forest green accents for the light theme.
-$site-accent: #2e7d5b;
+// Bright purple accents for the light theme.
+$site-accent: #8a2be2;
 
 :root,
 html[data-theme="light"] {
@@ -8,29 +8,74 @@ html[data-theme="light"] {
   --global-code-bg-color: #{rgba($site-accent, 0.05)};
 }
 
-// Homepage: smaller name, photo centered above the text
+// Homepage heading.
 .home-title {
   font-size: 2rem;
+  font-weight: 700;
 }
 
-.profile.profile-center {
-  width: 220px;
-  max-width: 70%;
-  margin: 0 auto 1.5rem;
-}
-
-// Homepage: keep the photo and bio in a narrow centered column.
-.home-narrow {
-  max-width: 560px;
+// Homepage: align the portrait with the heading beside the bio.
+.about-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "header" "photo" "body";
+  gap: 1.5rem;
+  align-items: start;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 
-  .post-header {
-    text-align: center;
+  > .post-header {
+    grid-area: header;
+    min-width: 0;
+    margin: 0;
+    text-align: left;
+
+    .home-title {
+      margin: 0;
+    }
+
+    .desc {
+      margin: 0.5rem 0 0;
+    }
   }
 
-  .home-title {
-    text-align: left;
-    transform: translateY(-0.75rem);
+  > .profile {
+    grid-area: photo;
+    width: 220px;
+    max-width: 100%;
+    margin: 0;
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+    }
   }
+
+  > article {
+    grid-area: body;
+    min-width: 0;
+    overflow-wrap: break-word;
+
+    .clearfix > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-page {
+    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "photo header" "photo body";
+    column-gap: 2.5rem;
+  }
+}
+
+.about-page.about-page-no-profile {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "header" "body";
 }
